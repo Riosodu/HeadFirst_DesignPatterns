@@ -1,18 +1,13 @@
 package SimUDuck;
 
-public class MallardDuck extends Duck implements Quackable, Flyable{
+public class MallardDuck extends Duck {
+    public MallardDuck() {
+        quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
+    }
+
     @Override
     public void display() {
-        System.out.println("Looks like a mallard");
-    }
-
-    @Override
-    public void quack() {
-        System.out.println("Quack!");
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("I'm flying");
+        System.out.println("I'm a real Mallard duck");
     }
 }
